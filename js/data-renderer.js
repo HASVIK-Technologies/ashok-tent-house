@@ -46,7 +46,7 @@ function renderHero() {
         <i class="bi ${CONFIG.hero.cta.primary.icon}"></i>
         <span>${CONFIG.hero.cta.primary.label}</span>
       </a>
-      <a href="${whatsappLink}" target="_blank" rel="noopener" class="btn btn-premium btn-primary-premium-outline d-inline-flex align-items-center gap-2">
+      <a href="${whatsappLink}" target="_blank" rel="noopener" class="btn btn-premium btn-primary-premium d-inline-flex align-items-center gap-2">
         <i class="bi ${CONFIG.hero.cta.secondary.icon}"></i>
         <span>${CONFIG.hero.cta.secondary.label}</span>
       </a>
@@ -166,9 +166,9 @@ function renderStats() {
   if (!statsRow || !CONFIG.stats) return;
 
   const statsHTML = CONFIG.stats.map((stat, index) => `
-    <div class="col-md-3" data-aos="fade-up" data-aos-delay="${index * 100}">
+    <div class="col-md-3">
       <div class="stat-card">
-        <h2 class="stat-number" data-target="${stat.number}">0</h2>
+        <h2 class="stat-number">${stat.number}</h2>
         <p class="stat-text">${stat.label}</p>
       </div>
     </div>

@@ -31,7 +31,7 @@
     ],
     "cta": {
       "primary": { "label": "Call Now", "type": "call", "icon": "bi-telephone-fill" },
-      "secondary": { "label": "WhatsApp Us", "type": "whatsapp", "icon": "bi-whatsapp" }
+      "secondary": { "label": "WhatsApp", "type": "whatsapp", "icon": "bi-whatsapp" }
     },
     "backgroundImage": "./assets/images/hero-red.jpeg"
   },
@@ -132,15 +132,16 @@
       { "src": "./assets/videos/2.mp4", "thumbnail": "./assets/images/thumb2.jpeg" },
       { "src": "./assets/videos/3.mp4", "thumbnail": "./assets/images/thumb1.jpeg" },
       { "src": "./assets/videos/4.mp4", "thumbnail": "./assets/images/thumb2.jpeg" },
-      { "src": "./assets/videos/5.mp4", "thumbnail": "./assets/images/thumb1.jpeg" }
+      { "src": "./assets/videos/5.mp4", "thumbnail": "./assets/images/thumb1.jpeg" },
+      { "src": "./assets/videos/3.mp4", "thumbnail": "./assets/images/thumb1.jpeg" }
     ],
     "mainPoster": "./assets/images/thumb1.jpeg"
   },
   "stats": [
-    { "number": 500, "label": "Events Completed" },
-    { "number": 25, "label": "Years Experience" },
-    { "number": 100, "label": "Client Satisfaction" },
-    { "number": 24, "label": "Support Available" }
+    { "number": "2000+", "label": "Events Completed" },
+    { "number": "25+", "label": "Years of Service" },
+    { "number": "1000+", "label": "Client Satisfaction" },
+    { "number": "20+", "label": "Team Members" }
   ],
   "whyUs": {
     "kicker": "Why Choose Us",
@@ -193,6 +194,6 @@
       "location": "Maniar, Ballia, Uttar Pradesh",
       "website": "https://www.hasviktech.com"
     },
-    "copyright": "© 2024 Ashok Tent House"
+    "copyright": "© Ashok Tent House"
   }
 }
