@@ -1,0 +1,34 @@
+.stats-section {
+    background: #ffffff;
+}
+
+.stats-shell {
+    background: transparent;
+    border-radius: 0;
+    padding: 30px 18px;
+    box-shadow: none;
+    border: none;
+}
+
+.stat-card {
+    background: transparent;
+    border-radius: 0;
+    padding: 24px 18px;
+    border: none;
+    box-shadow: none;
+    transition: none;
+}
+
+.stat-number {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #c9a54c;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.stat-text {
+    color: #666;
+    font-weight: 600;
+    margin: 0;
+}

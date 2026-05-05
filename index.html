@@ -8,7 +8,7 @@
     <title>Ashok Tent House</title>
     <meta name="description"
         content="Premium tent, decoration, and event management services for weddings, parties, and occasions." />
-
+    <link rel="icon" href="./assets/images/logo.jpeg" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -18,1592 +18,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-    <style>
-        :root {
-            --font-body: "Inter", sans-serif;
-            --font-display: "Cormorant Garamond", serif;
-
-            --bg-page: #f8fafc;
-            --bg-surface: #ffffff;
-            --bg-soft: #fff8f3;
-            --bg-soft-2: #fffdfb;
-            --bg-primary: #6b0714;
-            --bg-strip: linear-gradient(90deg, #6b0714 0%, #7f0b19 100%);
-            --bg-footer: linear-gradient(180deg, #0b0b0d 0%, #151518 100%);
-
-            --nav-background: linear-gradient(90deg, #4b030b 20%, #5a0610fa 100%);
-
-            --text-main: #18283d;
-            --text-muted: #617086;
-            --text-white: #ffffff;
-            --text-light: #ebebeb;
-            --text-primary-2: #f1c15a;
-
-            --primary: #6b0714;
-            --primary-2: #f1c15a;
-            --primary-dark: #530510;
-            --accent: #6b0714;
-
-            --border-soft: rgba(23, 48, 77, 0.08);
-            --shadow-sm: 0 8px 20px rgba(28, 64, 112, 0.08);
-            --shadow-md: 0 16px 40px rgba(28, 64, 112, 0.12);
-            --shadow-lg: 0 28px 70px rgba(28, 64, 112, 0.18);
-
-            --radius-sm: 12px;
-            --radius-md: 18px;
-            --radius-lg: 24px;
-            --radius-xl: 34px;
-            --radius-pill: 999px;
-
-            --section-space: 92px;
-            --container-max: 1200px;
-
-            --hero-gradient: linear-gradient(90deg, rgba(34, 2, 7, 0.92) 0%, rgba(107, 7, 20, 0.55) 55%, rgba(107, 7, 20, 0.12) 100%);
-            --glass: rgba(255, 255, 255, 0.14);
-            --glass-border: rgba(255, 255, 255, 0.24);
-
-            --transition-fast: 180ms ease;
-            --transition-base: 320ms ease;
-            --transition-slow: 520ms ease;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--font-body);
-            color: var(--text-main);
-            background: var(--bg-page);
-            overflow-x: hidden;
-        }
-
-        img,
-        video,
-        iframe {
-            max-width: 100%;
-            display: block;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        .container {
-            max-width: var(--container-max);
-        }
-
-        .section-padding {
-            padding: var(--section-space) 0;
-        }
-
-        .section-soft {
-            background: var(--bg-soft);
-        }
-
-        .section-white {
-            background: var(--bg-surface);
-        }
-
-        .section-primary {
-            background: var(--bg-primary) !important;
-        }
-
-        .section-title-wrap {
-            text-align: center;
-            margin-bottom: 28px;
-        }
-
-        .section-kicker {
-            font-size: .82rem;
-            text-transform: uppercase;
-            letter-spacing: .18em;
-            color: var(--text-primary-2);
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .section-title {
-            font-family: var(--font-display);
-            font-size: clamp(2rem, 3vw, 3rem);
-            line-height: .95;
-            margin: 0;
-            color: var(--text-main);
-            font-weight: 700;
-        }
-
-        .section-title.light {
-            color: #fff;
-        }
-
-        .section-divider {
-            width: 88px;
-            height: 3px;
-            background: linear-gradient(90deg, transparent 0%, var(--primary-2) 50%, transparent 100%);
-            margin: 14px auto 0;
-            border-radius: var(--radius-pill);
-            opacity: .7;
-        }
-
-        .btn-premium {
-            border: 0;
-            border-radius: var(--radius-pill);
-            padding: 12px 24px;
-            font-weight: 700;
-            transition: transform var(--transition-base), box-shadow var(--transition-base), background var(--transition-base), color var(--transition-base);
-        }
-
-        .btn-premium:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .btn-primary-premium-outline {
-            border: 2px solid var(--primary-2);
-            color: var(--primary-2);
-            background: transparent;
-            box-shadow: 0 12px 24px rgba(241, 193, 90, 0.16);
-        }
-
-        .btn-primary-premium-outline:hover {
-            background: var(--primary-2);
-            color: var(--primary);
-        }
-
-        .btn-primary-premium {
-            background: var(--primary-2);
-            color: var(--primary);
-            border: 2px solid var(--primary-2);
-        }
-
-        .btn-primary-premium:hover {
-            color: var(--primary-2);
-            background: transparent;
-            border: 2px solid var(--primary-2);
-        }
-
-        .section-reveal {
-            opacity: 0;
-            transform: translateY(26px);
-            transition: opacity .9s ease, transform .9s ease;
-            will-change: opacity, transform;
-        }
-
-        .section-reveal.in-view {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .card-lift {
-            transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
-        }
-
-        .card-lift:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-md);
-        }
-
-        /* DESIGNER TOP BAR */
-        .designer-bar {
-            background: linear-gradient(90deg, #210206 0%, #4b030b 55%, #5a0610 100%);
-            color: rgba(255, 255, 255, 0.92);
-            font-size: .9rem;
-            border-bottom: 1px solid rgba(241, 193, 90, .18);
-        }
-
-        .designer-bar .badge-soft {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 12px;
-            border-radius: var(--radius-pill);
-            background: rgba(241, 193, 90, .12);
-            color: #fff;
-            border: 1px solid rgba(241, 193, 90, .22);
-            white-space: nowrap;
-        }
-
-        .designer-bar a {
-            color: #fff;
-        }
-
-        .designer-bar a:hover {
-            color: var(--text-primary-2);
-        }
-
-        .designer-bar .site-chip {
-            align-items: center;
-            gap: 8px;
-            padding: 6px 12px;
-            border-radius: var(--radius-pill);
-            background: rgba(255, 255, 255, .08);
-            border: 1px solid rgba(255, 255, 255, .12);
-        }
-
-        /* NAVBAR */
-        .site-navbar {
-            padding-left: 140px;
-            background: var(--nav-background);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 6px 28px rgba(20, 48, 77, 0.06);
-        }
-
-        .site-navbar .navbar-brand {
-            padding: 10px 0;
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .logo-box {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 130px;
-            height: 115px;
-            background: #fff;
-            border-bottom-left-radius: 75px;
-            border-bottom-right-radius: 75px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: var(--shadow-sm);
-            overflow: hidden;
-        }
-
-        .logo-box img {
-            width: 82px;
-            height: auto;
-            object-fit: contain;
-        }
-
-        .site-navbar .nav-link {
-            color: var(--text-white);
-            font-weight: 700;
-            font-size: .92rem;
-            padding: 1.2rem .95rem;
-            position: relative;
-            transition: color var(--transition-base);
-        }
-
-        .site-navbar .nav-link:hover,
-        .site-navbar .nav-link.active {
-            color: var(--text-primary-2);
-        }
-
-        .site-navbar .nav-link.active::after {
-            content: "";
-            position: absolute;
-            left: 12px;
-            right: 12px;
-            bottom: 14px;
-            height: 2px;
-            background: var(--primary-2);
-            border-radius: var(--radius-pill);
-        }
-
-        .call-top {
-            padding: 6px 16px;
-            font-weight: 600;
-            transition: transform var(--transition-base), background var(--transition-base);
-            white-space: nowrap;
-        }
-
-        .navbar-toggler {
-            border: 0;
-            box-shadow: none !important;
-        }
-
-        .navbar-toggler-icon {
-            filter: invert(1);
-        }
-
-        /* HERO */
-        .hero {
-            background: #fff;
-        }
-
-        .hero-shell {
-            background-image: url(./assets/images/hero-red.jpeg);
-            background-position: center;
-            background-size: cover;
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            min-height: 620px;
-            position: relative;
-        }
-
-        .hero-shell::before {
-            content: "";
-            background: var(--hero-gradient);
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-        }
-
-        .hero-left {
-            position: relative;
-            z-index: 2;
-            color: #fff;
-            padding: 76px 28px 56px 56px;
-        }
-
-        .hero-strap {
-            color: var(--text-primary-2);
-            font-family: var(--font-display);
-            font-size: 2rem;
-            font-style: italic;
-            margin-bottom: 10px;
-            opacity: .95;
-        }
-
-        .hero-title {
-            font-family: var(--font-display);
-            font-size: clamp(3.4rem, 6vw, 5.8rem);
-            line-height: .88;
-            font-weight: 700;
-            margin: 0;
-            letter-spacing: .01em;
-            text-transform: uppercase;
-            text-shadow: 0 10px 35px rgba(0, 0, 0, .16);
-        }
-
-        .hero-subtitle {
-            max-width: 560px;
-            margin-top: 18px;
-            font-size: 1.02rem;
-            color: rgba(255, 255, 255, .92);
-            line-height: 1.8;
-            font-weight: 500;
-        }
-
-        .hero-actions {
-            margin-top: 28px;
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
-
-        .hero-badges {
-            margin-top: 22px;
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .hero-badges span {
-            padding: 8px 14px;
-            border-radius: var(--radius-pill);
-            background: rgba(255, 255, 255, .12);
-            border: 1px solid rgba(255, 255, 255, .14);
-            color: #fff;
-            font-size: .84rem;
-            font-weight: 600;
-            backdrop-filter: blur(8px);
-        }
-
-        .hero-art {
-            position: relative;
-            height: 100%;
-            min-height: 520px;
-        }
-
-        .hero-art img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .hero-art::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background:
-                linear-gradient(90deg, rgba(43, 124, 223, .18) 0%, rgba(43, 124, 223, 0) 22%),
-                linear-gradient(180deg, rgba(255, 255, 255, 0) 30%, rgba(0, 0, 0, .10) 100%);
-        }
-
-        /* HASVIK CREDIT STRIP */
-        .credits-strip {
-            background: #fff;
-            position: relative;
-        }
-
-        .credits-card {
-            background: linear-gradient(180deg, #ffffff 0%, #fff8ef 100%);
-            border: 1px solid rgba(23, 48, 77, .08);
-            border-radius: 24px;
-            box-shadow: var(--shadow-sm);
-            overflow: hidden;
-        }
-
-        .credits-left {
-            padding: 28px;
-        }
-
-        .credits-kicker {
-            font-size: .8rem;
-            text-transform: uppercase;
-            letter-spacing: .18em;
-            color: var(--primary);
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
-
-        .credits-title {
-            font-family: var(--font-display);
-            font-size: clamp(1.9rem, 3vw, 2.6rem);
-            line-height: .95;
-            color: #1c1c1c;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .credits-text {
-            color: var(--text-muted);
-            line-height: 1.8;
-            margin-bottom: 0;
-        }
-
-        .credits-right {
-            background: linear-gradient(180deg, rgba(107, 7, 20, .04) 0%, rgba(241, 193, 90, .08) 100%);
-            padding: 28px;
-            border-left: 1px solid rgba(23, 48, 77, .06);
-            height: 100%;
-        }
-
-        .credit-list {
-            display: grid;
-            gap: 12px;
-        }
-
-        .credit-item {
-            display: flex;
-            gap: 12px;
-            align-items: flex-start;
-            padding: 14px 16px;
-            border-radius: 16px;
-            background: #fff;
-            border: 1px solid rgba(23, 48, 77, .06);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .credit-item i {
-            color: var(--primary-2);
-            font-size: 1.1rem;
-            margin-top: 2px;
-            width: 22px;
-            flex: 0 0 auto;
-        }
-
-        .credit-item h6 {
-            margin: 0 0 4px;
-            font-size: .82rem;
-            text-transform: uppercase;
-            letter-spacing: .04em;
-            font-weight: 800;
-            color: #1e2d3d;
-        }
-
-        .credit-item p,
-        .credit-item a {
-            margin: 0;
-            color: var(--text-muted);
-            font-size: .92rem;
-            word-break: break-word;
-        }
-
-        .credit-item a {
-            color: var(--primary);
-            font-weight: 600;
-        }
-
-        .credit-item a:hover {
-            color: var(--primary-dark);
-        }
-
-        .credit-pill-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 18px;
-        }
-
-        .credit-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 14px;
-            border-radius: var(--radius-pill);
-            background: rgba(107, 7, 20, .06);
-            color: var(--primary);
-            font-size: .86rem;
-            font-weight: 700;
-            border: 1px solid rgba(107, 7, 20, .10);
-        }
-
-        /* COMBINED ABOUT + SERVICES */
-        .about-services-section {
-            background: #fffdf9;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about-services-section::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(circle at 10% 20%, rgba(241, 193, 90, 0.10), transparent 28%),
-                radial-gradient(circle at 90% 30%, rgba(107, 7, 20, 0.06), transparent 30%);
-            pointer-events: none;
-        }
-
-        .about-services-section .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .about-collage {
-            min-height: 420px;
-        }
-
-        .about-img-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 14px;
-            position: relative;
-        }
-
-        .about-img {
-            overflow: hidden;
-            border-radius: 18px;
-            box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
-            background: #fff;
-        }
-
-        .about-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .about-img:hover img {
-            transform: scale(1.05);
-        }
-
-        .about-img-large {
-            grid-row: span 2;
-            min-height: 392px;
-        }
-
-        .about-img-small.top,
-        .about-img-small.bottom {
-            min-height: 189px;
-        }
-
-        .experience-badge {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 118px;
-            height: 118px;
-            border-radius: 50%;
-            background: var(--primary);
-            color: #fff;
-            border: 8px solid #fff8f1;
-            box-shadow: 0 18px 40px rgba(107, 7, 20, 0.25);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-            z-index: 2;
-        }
-
-        .experience-number {
-            font-size: 2.1rem;
-            line-height: 1;
-            font-weight: 800;
-        }
-
-        .experience-text {
-            font-size: 0.78rem;
-            line-height: 1.1;
-            font-weight: 600;
-            margin-top: 3px;
-        }
-
-        .about-heading {
-            font-family: var(--font-display);
-            font-size: clamp(2.2rem, 4vw, 3.7rem);
-            line-height: 0.96;
-            color: #1d1d1d;
-            font-weight: 700;
-        }
-
-        .about-accent {
-            color: var(--primary);
-        }
-
-        .about-divider {
-            width: 70px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary-2), var(--primary));
-            border-radius: 999px;
-        }
-
-        .about-text {
-            color: #5f6d7c;
-            line-height: 1.85;
-            margin-bottom: 16px;
-            font-weight: 500;
-        }
-
-        .btn-about-premium {
-            background: var(--primary);
-            color: #fff;
-            padding: 12px 20px;
-            border-radius: 10px;
-            font-weight: 700;
-            box-shadow: 0 12px 26px rgba(107, 7, 20, 0.18);
-        }
-
-        .btn-about-premium:hover {
-            background: var(--primary-dark);
-            color: #fff;
-        }
-
-        .section-title-line {
-            width: 110px;
-            height: 1px;
-            background: rgba(107, 7, 20, 0.18);
-            display: inline-block;
-            vertical-align: middle;
-            margin: 0 14px;
-        }
-
-        .services-title {
-            display: inline-block;
-            font-family: var(--font-display);
-            font-size: clamp(1.7rem, 2.5vw, 2.3rem);
-            color: #1d1d1d;
-            font-weight: 700;
-            vertical-align: middle;
-        }
-
-        .service-box {
-            background: #fff;
-            border: 1px solid rgba(23, 48, 77, 0.08);
-            border-radius: 14px;
-            text-align: center;
-            padding: 22px 14px 18px;
-            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.04);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-        }
-
-        .service-box:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.08);
-            border-color: rgba(107, 7, 20, 0.14);
-        }
-
-        .service-icon {
-            width: 58px;
-            height: 58px;
-            margin: 0 auto 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: var(--primary-2);
-        }
-
-        .service-box h6 {
-            font-size: 0.82rem;
-            font-weight: 800;
-            letter-spacing: 0.02em;
-            text-transform: uppercase;
-            color: #1e2d3d;
-            margin-bottom: 8px;
-        }
-
-        .service-box p {
-            font-size: 0.82rem;
-            line-height: 1.45;
-            color: #6a7684;
-            margin: 0;
-        }
-
-        /* OWNER */
-        .owner-section {
-            background: #fffdfb;
-        }
-
-        .owner-card {
-            background: #fff;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            border: 1px solid rgba(23, 48, 77, .06);
-        }
-
-        .owner-image {
-            height: 500px;
-            overflow: hidden;
-        }
-
-        .owner-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .owner-content {
-            padding: 30px 30px 30px 16px;
-        }
-
-        .owner-title {
-            font-family: var(--font-display);
-            font-size: 2.6rem;
-            color: #1a1a1a;
-            margin-bottom: 6px;
-        }
-
-        .owner-subtitle {
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 16px;
-            color: #777;
-        }
-
-        .owner-text {
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 14px;
-        }
-
-        .owner-signature {
-            margin-top: 20px;
-            font-family: var(--font-display);
-            font-size: 1.4rem;
-            color: #c9a54c;
-        }
-
-        .owner-highlights {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 18px;
-        }
-
-        .owner-highlights span {
-            padding: 9px 14px;
-            border-radius: var(--radius-pill);
-            background: #fff;
-            border: 1px solid rgba(201, 165, 76, .18);
-            box-shadow: var(--shadow-sm);
-            color: #6f5a2e;
-            font-size: .88rem;
-            font-weight: 600;
-        }
-
-        /* WORK / GALLERY SECTION */
-        .premium-gallery {
-            background: linear-gradient(180deg, #6b0714 0%, #7d0b19 100%);
-            color: #fff;
-            position: relative;
-        }
-
-        .premium-gallery::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(circle at 20% 30%, rgba(241, 193, 90, 0.08), transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.05), transparent 50%);
-            pointer-events: none;
-        }
-
-        .premium-gallery .section-title {
-            color: #fff;
-        }
-
-        .premium-gallery .section-kicker {
-            color: var(--text-primary-2);
-        }
-
-        .gallery-premium-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            grid-auto-rows: 240px;
-            gap: 18px;
-        }
-
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 20px;
-            cursor: pointer;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
-            background: rgba(255, 255, 255, .96);
-            border: 1px solid rgba(255, 255, 255, .10);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.8s ease, filter 0.6s ease;
-            filter: brightness(0.98);
-        }
-
-        .gallery-item.big {
-            grid-row: span 2;
-        }
-
-        .gallery-item.tall {
-            grid-row: span 2;
-        }
-
-        .gallery-item .overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(107, 7, 20, 0.80), rgba(0, 0, 0, 0.06));
-            display: flex;
-            align-items: flex-end;
-            padding: 22px;
-            opacity: 0;
-            transition: 0.4s ease;
-        }
-
-        .gallery-item .overlay h4,
-        .gallery-item .overlay span {
-            color: #fff;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            margin: 0;
-        }
-
-        .gallery-item .overlay small {
-            color: rgba(255, 255, 255, 0.82);
-            display: block;
-            margin-top: 4px;
-            font-size: .8rem;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.08);
-            filter: brightness(1);
-        }
-
-        .gallery-item:hover .overlay {
-            opacity: 1;
-        }
-
-        .premium-video {
-            margin-top: 26px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .video-shell {
-            background: rgba(255, 255, 255, .96);
-            border: 1px solid rgba(255, 255, 255, .14);
-            border-radius: 24px;
-            padding: 18px;
-            box-shadow: var(--shadow-md);
-        }
-
-        .video-main {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            background: #fff;
-        }
-
-        .video-main video {
-            width: 100%;
-            height: 420px;
-            object-fit: cover;
-        }
-
-        .video-overlay {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-
-        .video-overlay i {
-            font-size: 54px;
-            background: rgba(255, 255, 255, 0.92);
-            color: #000;
-            padding: 16px;
-            border-radius: 100%;
-            transition: 0.3s;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, .18);
-        }
-
-        .video-overlay:hover i {
-            transform: scale(1.1);
-        }
-
-        .video-thumbs {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 12px;
-            margin-top: 14px;
-        }
-
-        .video-thumb {
-            height: 84px;
-            border-radius: 12px;
-            overflow: hidden;
-            cursor: pointer;
-            border: 2px solid transparent;
-            transition: 0.3s;
-            position: relative;
-            background: #fff;
-        }
-
-        .video-thumb::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(107, 7, 20, .12), transparent);
-            pointer-events: none;
-        }
-
-        .video-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: .98;
-        }
-
-        .video-thumb.active {
-            border-color: var(--primary-2);
-            transform: translateY(-4px);
-            box-shadow: 0 14px 30px rgba(241, 193, 90, 0.15);
-        }
-
-        /* STATS */
-        .stats-section {
-            background: #ffffff;
-        }
-
-        .stats-shell {
-            background: #fffdfb;
-            border-radius: 22px;
-            padding: 30px 18px;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid rgba(23, 48, 77, .06);
-        }
-
-        .stat-card {
-            background: #fff;
-            border-radius: 18px;
-            padding: 24px 18px;
-            border: 1px solid rgba(107, 7, 20, .06);
-            box-shadow: var(--shadow-sm);
-            transition: transform var(--transition-base), box-shadow var(--transition-base);
-        }
-
-        .stat-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .stat-number {
-            font-size: 2.8rem;
-            font-weight: 800;
-            color: #c9a54c;
-            line-height: 1;
-            margin-bottom: 8px;
-        }
-
-        .stat-text {
-            color: #666;
-            font-weight: 600;
-            margin: 0;
-        }
-
-        /* WHY STRIP */
-        .why-strip {
-            background: var(--bg-strip);
-            position: relative;
-            overflow: hidden;
-            color: #fff;
-        }
-
-        .why-strip::before,
-        .why-strip::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-repeat: no-repeat;
-            background-size: cover;
-            opacity: .20;
-            pointer-events: none;
-        }
-
-        .why-strip::before {
-            background-image: radial-gradient(circle at 15% 40%, rgba(255, 255, 255, .55) 0 3px, transparent 4px), radial-gradient(circle at 70% 10%, rgba(255, 255, 255, .45) 0 2px, transparent 3px);
-        }
-
-        .why-strip .container {
-            position: relative;
-            z-index: 2;
-        }
-
-        .why-items {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 22px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .why-item {
-            display: flex;
-            gap: 14px;
-            align-items: flex-start;
-            color: #fff;
-            background: rgba(255, 255, 255, .08);
-            padding: 18px;
-            border-radius: 18px;
-            border: 1px solid rgba(255, 255, 255, .12);
-            backdrop-filter: blur(8px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
-        }
-
-        .why-item .icon {
-            width: 54px;
-            height: 54px;
-            border-radius: 50%;
-            border: 2px solid rgba(255, 255, 255, .55);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.45rem;
-            flex: 0 0 auto;
-        }
-
-        .why-item h6 {
-            margin: 0 0 6px;
-            font-size: .86rem;
-            letter-spacing: .03em;
-            text-transform: uppercase;
-            font-weight: 800;
-        }
-
-        .why-item p {
-            margin: 0;
-            font-size: .86rem;
-            line-height: 1.45;
-            opacity: .94;
-        }
-
-        /* TESTIMONIALS + CONTACT */
-        .testimonial-card {
-            background: #fff;
-            border-radius: 18px;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid rgba(23, 48, 77, .06);
-            padding: 24px;
-            height: 100%;
-            position: relative;
-        }
-
-        .testimonial-card::before {
-            content: "“";
-            position: absolute;
-            top: 10px;
-            left: 18px;
-            font-size: 64px;
-            line-height: 1;
-            color: var(--primary);
-            opacity: .18;
-            font-family: var(--font-display);
-        }
-
-        .quote-text {
-            color: var(--text-muted);
-            line-height: 1.8;
-            margin: 18px 0 18px;
-            font-weight: 500;
-        }
-
-        .stars {
-            color: #f4b000;
-            font-size: 1rem;
-            letter-spacing: .08em;
-            margin-top: 4px;
-        }
-
-        .touch-card {
-            background: linear-gradient(180deg, #6b0714 0%, #8c1224 100%);
-            border-radius: 18px;
-            color: #fff;
-            padding: 28px 26px;
-            box-shadow: var(--shadow-md);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .touch-card h3 {
-            font-family: var(--font-display);
-            font-size: 2.3rem;
-            line-height: .95;
-            margin-bottom: 12px;
-            color: #fff;
-        }
-
-        .touch-card p {
-            color: rgba(255, 255, 255, .92);
-            line-height: 1.8;
-            margin-bottom: 22px;
-        }
-
-        .contact-box {
-            background: #fff;
-            border-radius: 18px;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid rgba(23, 48, 77, .06);
-            padding: 24px;
-            height: 100%;
-        }
-
-        .contact-item {
-            display: flex;
-            gap: 12px;
-            align-items: flex-start;
-            margin-bottom: 16px;
-        }
-
-        .contact-item i {
-            color: var(--primary-2);
-            font-size: 1.2rem;
-            margin-top: 2px;
-            width: 24px;
-            flex: 0 0 auto;
-        }
-
-        .contact-item h6 {
-            margin: 0 0 3px;
-            font-size: .84rem;
-            text-transform: uppercase;
-            letter-spacing: .04em;
-            color: var(--text-main);
-            font-weight: 800;
-        }
-
-        .contact-item p {
-            margin: 0;
-            color: var(--text-muted);
-            font-size: .92rem;
-        }
-
-        .map-frame {
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            background: #fff;
-            border: 1px solid rgba(23, 48, 77, .06);
-            height: 100%;
-            min-height: 290px;
-        }
-
-        .map-frame iframe {
-            width: 100%;
-            height: 100%;
-            min-height: 290px;
-            border: 0;
-        }
-
-        /* FOOTER */
-
-        /* ===== Base ===== */
-        .premium-footer {
-            background: #0a0a0b;
-            color: #d4d4d8;
-            font-family: 'Inter', sans-serif;
-            padding: 80px 0 20px;
-        }
-
-        /* ===== Grid ===== */
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 50px;
-            margin-bottom: 50px;
-        }
-
-        /* ===== Typography ===== */
-        .footer-col h5 {
-            font-size: 0.75rem;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: #71717a;
-            margin-bottom: 18px;
-        }
-
-        .footer-col h6 {
-            color: #d6b36a;
-            margin: 8px 0;
-            font-weight: 500;
-        }
-
-        .footer-col a,
-        .footer-col p {
-            display: block;
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-            color: #d4d4d8;
-            text-decoration: none;
-            transition: all 0.25s ease;
-        }
-
-        /* ===== Hover (subtle lift) ===== */
-        .footer-col a:hover {
-            color: #d6b36a;
-            transform: translateX(3px);
-        }
-
-        /* ===== Brand ===== */
-        .footer-col.brand img {
-            width: 55px;
-            margin-bottom: 12px;
-        }
-
-        .footer-col.brand h3 {
-            color: #fff;
-            font-size: 1.2rem;
-        }
-
-        .footer-col.brand p {
-            font-size: 0.85rem;
-            color: #71717a;
-        }
-
-        /* ===== Bottom ===== */
-        .footer-bottom {
-            border-top: 1px solid #1a1a1d;
-            padding-top: 18px;
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.8rem;
-            color: #71717a;
-        }
-
-        /* ===== Scroll Animation Base ===== */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-
-        /* visible state */
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* ===== Stagger effect ===== */
-        .footer-col:nth-child(1) {
-            transition-delay: 0.1s;
-        }
-
-        .footer-col:nth-child(2) {
-            transition-delay: 0.2s;
-        }
-
-        .footer-col:nth-child(3) {
-            transition-delay: 0.3s;
-        }
-
-        .footer-col:nth-child(4) {
-            transition-delay: 0.4s;
-        }
-
-        .footer-bottom {
-            transition-delay: 0.5s;
-        }
-
-        /* ===== Responsive ===== */
-        @media (max-width: 768px) {
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 30px;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                text-align: center;
-                gap: 10px;
-            }
-        }
-
-        /* ===== Responsive ===== */
-        @media (max-width: 768px) {
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 25px;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                text-align: center;
-                gap: 8px;
-            }
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 1199.98px) {
-            .services-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .why-items {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .hero-left {
-                padding: 56px 24px 36px 28px;
-            }
-        }
-
-        @media (max-width: 991.98px) {
-            .site-navbar {
-                padding-left: 0;
-            }
-
-            .site-navbar .container ul {
-                padding-top: 24px;
-            }
-
-            .site-navbar .nav-link.active::after {
-                left: 0;
-                right: auto;
-                width: 100%;
-            }
-
-            .hero-left {
-                padding: 44px 20px 24px;
-            }
-
-            .hero-art {
-                min-height: 360px;
-            }
-
-            .about-collage {
-                max-width: 650px;
-                margin: 0 auto;
-            }
-
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .owner-content {
-                padding: 24px;
-            }
-
-            .owner-image {
-                min-height: 320px;
-            }
-
-            .gallery-premium-grid {
-                grid-template-columns: repeat(2, 1fr);
-                grid-auto-rows: 220px;
-            }
-
-            .gallery-item.big {
-                grid-column: span 2;
-            }
-
-            .video-thumbs {
-                grid-template-columns: repeat(5, minmax(110px, 1fr));
-                overflow-x: auto;
-                padding-bottom: 6px;
-            }
-
-            .why-items {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-tagline {
-                font-size: 1.45rem;
-            }
-
-            .credits-right {
-                border-left: 0;
-                border-top: 1px solid rgba(23, 48, 77, .06);
-            }
-        }
-
-        @media (max-width: 767.98px) {
-            .designer-bar {
-                font-size: .82rem;
-            }
-
-            .designer-bar .badge-soft,
-            .designer-bar .site-chip {
-                width: 100%;
-                justify-content: center;
-                white-space: normal;
-            }
-
-            .logo-box {
-                width: 110px;
-                height: 80px;
-                border-bottom-left-radius: 75px;
-                border-bottom-right-radius: 75px;
-            }
-
-            .logo-box img {
-                width: 116px;
-                height: 64px;
-            }
-
-            .hero-title {
-                font-size: clamp(2.5rem, 12vw, 4rem);
-            }
-
-            .hero-strap {
-                font-size: 1.5rem;
-            }
-
-            .hero-subtitle {
-                font-size: .96rem;
-            }
-
-            .hero-actions {
-                gap: 10px;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery-premium-grid {
-                grid-template-columns: 1fr;
-                grid-auto-rows: 220px;
-            }
-
-            .gallery-item.big,
-            .gallery-item.tall {
-                grid-column: auto;
-                grid-row: auto;
-            }
-
-            .video-main video {
-                height: 320px;
-            }
-
-            .video-thumbs {
-                grid-template-columns: repeat(5, minmax(92px, 1fr));
-            }
-
-            .why-items {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-links {
-                gap: 10px 14px;
-            }
-
-            .about-img-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-img-large {
-                min-height: 260px;
-            }
-
-            .about-img-small.top,
-            .about-img-small.bottom {
-                min-height: 180px;
-            }
-
-            .experience-badge {
-                width: 96px;
-                height: 96px;
-                border-width: 6px;
-            }
-
-            .experience-number {
-                font-size: 1.7rem;
-            }
-
-            .footer-contact-line {
-                gap: 10px 16px;
-                font-size: .88rem;
-            }
-
-            .credits-left,
-            .credits-right {
-                padding: 22px;
-            }
-        }
-
-        @media (max-width: 575.98px) {
-            .section-padding {
-                padding: 72px 0;
-            }
-
-            .hero-shell {
-                min-height: 560px;
-            }
-
-            .owner-title {
-                font-size: 2.2rem;
-            }
-
-            .owner-image {
-                min-height: 260px;
-            }
-
-            .video-main video {
-                height: 260px;
-            }
-
-            .video-thumbs {
-                grid-template-columns: repeat(5, minmax(88px, 1fr));
-            }
-
-            .map-frame {
-                min-height: 260px;
-            }
-
-            .map-frame iframe {
-                min-height: 260px;
-            }
-
-            .section-title-line {
-                width: 56px;
-                margin: 0 10px;
-            }
-
-            .services-title {
-                font-size: 1.65rem;
-            }
-
-            .designer-bar .container {
-                gap: 8px !important;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/about-services.css">
+    <link rel="stylesheet" href="./css/owner.css">
+    <link rel="stylesheet" href="./css/gallery.css">
+    <link rel="stylesheet" href="./css/video.css">
+    <link rel="stylesheet" href="./css/stats.css">
+    <link rel="stylesheet" href="./css/why-us.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/responsive.css">
 </head>
 
 <body>
-
+    <!-- Navigation Link Starts -->
     <nav id="siteNavbar" class="navbar navbar-expand-lg navbar-dark site-navbar sticky-top py-2">
         <a class="navbar-brand p-0" href="#home" aria-label="Ashok Tent House Home">
             <div class="logo-box">
@@ -1618,20 +48,14 @@
                 <span>+91 80521 90808</span>
             </a>
 
-            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
                 aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i style="font-size: 28px; font-weight: bold;" class="bi bi-list"></i>
             </button>
 
             <div class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav gap-lg-3">
-                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about-services">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#owner">Owner</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#stats">Stats</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#why-us">Why Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+
                 </ul>
             </div>
 
@@ -1642,50 +66,18 @@
             </a>
         </div>
     </nav>
+    <!-- Navigation Link Ends -->
 
+    <!-- Main Content Starts -->
     <main id="main">
-
+        <!-- Section: Home -->
         <section id="home" class="hero">
             <div class="hero-shell">
                 <div class="container">
-                    <div class="row g-0 align-items-stretch">
-                        <div class="col-lg-7 d-flex align-items-center">
-                            <div class="hero-left" data-aos="fade-right">
-                                <div class="hero-strap">Make Your Moments Grand &amp; Memorable</div>
-
-                                <h1 class="hero-title">Ashok Tent House</h1>
-                                <p class="hero-subtitle">
-                                    Trusted Event Solutions in Adar, Bansdih - Ballia, U.P. for 25+ Years.
-                                </p>
-                                <p class="hero-subtitle">
-                                    Premium Tent, Decoration &amp; Event Management Services for Weddings, Parties &amp;
-                                    All Occasions.
-                                </p>
-
-                                <div class="hero-actions">
-                                    <a href="tel:+918052190808"
-                                        class="btn btn-premium btn-primary-premium d-inline-flex align-items-center gap-2">
-                                        <i class="bi bi-telephone-fill"></i>
-                                        <span>Call Now</span>
-                                    </a>
-                                    <a href="https://wa.me/918052190808" target="_blank" rel="noopener"
-                                        class="btn btn-premium btn-primary-premium-outline d-inline-flex align-items-center gap-2">
-                                        <i class="bi bi-whatsapp"></i>
-                                        <span>WhatsApp Us</span>
-                                    </a>
-                                </div>
-
-                                <div class="hero-badges">
-                                    <span>Wedding Decoration</span>
-                                    <span>Tent &amp; Canopy</span>
-                                    <span>Event Management</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-5 d-none d-lg-block">
-                            <div class="hero-art" data-aos="fade-left" data-aos-delay="120">
-                                <img src="./assets/images/hero-red.jpeg" alt="Premium event setup" loading="lazy">
+                    <div class="row g-0">
+                        <div class="col-12 d-flex justify-content-center">
+                            <div class="hero-left" data-aos="fade-up">
+                                
                             </div>
                         </div>
                     </div>
@@ -1694,7 +86,7 @@
         </section>
 
         <section id="about-services" class="section-padding about-services-section section-reveal">
-            <div class="container">
+            <div class="container px-5">
 
                 <div class="row align-items-center g-5 mb-5">
                     <div class="col-lg-6" data-aos="fade-right">
@@ -1870,71 +262,67 @@
                 </div>
 
                 <div class="row g-4 align-items-stretch">
-                    <div class="col-lg-7" data-aos="fade-up">
+                    <div class="col-12" data-aos="fade-up">
                         <div class="gallery-premium-grid">
                             <div class="gallery-item big">
                                 <img src="./assets/images/1.jpeg" alt="Royal wedding setup" loading="lazy">
-                                <div class="overlay">
-                                    <div>
-                                        <h4>Royal Wedding Setup</h4>
-                                        <small>Luxury drapes, stage and lighting</small>
-                                    </div>
-                                </div>
                             </div>
 
                             <div class="gallery-item">
                                 <img src="./assets/images/2.jpeg" alt="Stage decoration" loading="lazy">
-                                <div class="overlay">
-                                    <div>
-                                        <span>Stage Decoration</span>
-                                        <small>Grand focal point styling</small>
-                                    </div>
-                                </div>
                             </div>
 
                             <div class="gallery-item">
                                 <img src="./assets/images/3.jpeg" alt="Entrance design" loading="lazy">
-                                <div class="overlay">
-                                    <div>
-                                        <span>Entrance Design</span>
-                                        <small>Elegant welcome experience</small>
-                                    </div>
-                                </div>
                             </div>
 
                             <div class="gallery-item tall">
                                 <img src="./assets/images/4.jpeg" alt="Lighting setup" loading="lazy">
-                                <div class="overlay">
-                                    <div>
-                                        <span>Lighting Setup</span>
-                                        <small>Warm and premium ambience</small>
-                                    </div>
-                                </div>
                             </div>
 
                             <div class="gallery-item">
                                 <img src="./assets/images/5.jpeg" alt="Mandap design" loading="lazy">
-                                <div class="overlay">
-                                    <div>
-                                        <span>Mandap Design</span>
-                                        <small>Traditional with premium finish</small>
-                                    </div>
-                                </div>
                             </div>
 
                             <div class="gallery-item">
                                 <img src="./assets/images/6.jpeg" alt="Outdoor setup" loading="lazy">
-                                <div class="overlay">
-                                    <div>
-                                        <span>Outdoor Setup</span>
-                                        <small>Open-air celebration styling</small>
-                                    </div>
-                                </div>
+                            </div>
+
+                            <div class="gallery-item">
+                                <img src="./assets/images/7.jpg" alt="Catering arrangement" loading="lazy">
+                            </div>
+
+                            <div class="gallery-item">
+                                <img src="./assets/images/8.jpg" alt="Special event setup" loading="lazy">
+                            </div>
+
+                            <div class="gallery-item big">
+                                <img src="./assets/images/9.jpg" alt="Grand wedding decor" loading="lazy">
+                            </div>
+
+                            <div class="gallery-item tall">
+                                <img src="./assets/images/10.jpg" alt="Event lighting design" loading="lazy">
+                            </div>
+
+                            <div class="gallery-item">
+                                <img src="./assets/images/11.jpg" alt="Wedding stage setup" loading="lazy">
+                            </div>
+
+                            <div class="gallery-item">
+                                <img src="./assets/images/12.jpg" alt="Decorated venue" loading="lazy">
+                            </div>
+
+                            <div class="gallery-item">
+                                <img src="./assets/images/13.jpeg" alt="Premium tent setup" loading="lazy">
+                            </div>
+
+                            <div class="gallery-item">
+                                <img src="./assets/images/14.jpg" alt="Event decor details" loading="lazy">
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-5" data-aos="fade-left" data-aos-delay="120">
+                    <div class="col-12" data-aos="fade-left" data-aos-delay="120">
                         <div class="premium-video">
                             <div class="video-shell">
                                 <div class="section-title-wrap text-lg-start mb-3">
@@ -1942,31 +330,7 @@
                                     <h2 class="section-title text-dark">Watch Our Work</h2>
                                 </div>
 
-                                <div class="video-main">
-                                    <video id="mainVideo" muted playsinline preload="metadata"
-                                        poster="./assets/images/thumb1.jpeg"></video>
-                                    <div class="video-overlay" id="playBtn" aria-label="Play video">
-                                        <i class="bi bi-play-fill"></i>
-                                    </div>
-                                </div>
-
-                                <div class="video-thumbs">
-                                    <div class="video-thumb active" data-video="./assets/videos/1.mp4">
-                                        <img src="./assets/images/thumb1.jpeg" alt="Video thumbnail 1" loading="lazy">
-                                    </div>
-                                    <div class="video-thumb" data-video="./assets/videos/2.mp4">
-                                        <img src="./assets/images/thumb2.jpeg" alt="Video thumbnail 2" loading="lazy">
-                                    </div>
-                                    <div class="video-thumb" data-video="./assets/videos/3.mp4">
-                                        <img src="./assets/images/thumb1.jpeg" alt="Video thumbnail 3" loading="lazy">
-                                    </div>
-                                    <div class="video-thumb" data-video="./assets/videos/4.mp4">
-                                        <img src="./assets/images/thumb2.jpeg" alt="Video thumbnail 4" loading="lazy">
-                                    </div>
-                                    <div class="video-thumb" data-video="./assets/videos/5.mp4">
-                                        <img src="./assets/images/thumb1.jpeg" alt="Video thumbnail 5" loading="lazy">
-                                    </div>
-                                </div>
+                                <div class="video-grid" id="videoGrid"></div>
                             </div>
                         </div>
                     </div>
@@ -2156,6 +520,12 @@
                         <img src="./assets/images/logo.jpeg" alt="Ashok Tent House">
                         <h3>Ashok Tent House</h3>
                         <p>Your Trust, Our Commitment</p>
+                        <div class="social-links">
+                            <a href="https://wa.me/918052190808" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                            <a href="tel:+918052190808" aria-label="Call"><i class="bi bi-telephone-fill"></i></a>
+                            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        </div>
                     </div>
 
                     <div class="footer-col reveal">
@@ -2166,14 +536,14 @@
                         <a href="#contact">Contact</a>
                     </div>
 
-                    <div class="footer-col reveal">
+                    <div class="footer-col  contact-info reveal">
                         <h5>Contact</h5>
-                        <p>Adar, Bansdih - Ballia, U.P.</p>
-                        <a href="tel:+918052190808">+91 80521 90808</a>
-                        <a href="https://wa.me/918052190808">WhatsApp</a>
+                        <p><i class="bi bi-geo-alt-fill"></i> Adar, Bansdih - Ballia, U.P.</p>
+                        <a href="tel:+918052190808"><i class="bi bi-telephone-fill"></i> +91 80521 90808</a>
+                        <a href="https://wa.me/918052190808" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
                     </div>
 
-                    <div class="footer-col reveal">
+                    <div class="footer-col brand reveal">
                         <h5>Developed By</h5>
                         <h6>HASVIK Technologies</h6>
                         <p>Maniar, Ballia, Uttar Pradesh</p>
@@ -2190,23 +560,48 @@
             </div>
         </footer>
 
+        <div id="previewOverlay" class="preview-overlay" role="dialog" aria-modal="true" hidden>
+            <div class="preview-backdrop" data-preview-close></div>
+            <div class="preview-frame">
+                <button class="preview-close" aria-label="Close preview" data-preview-close>&times;</button>
+                <div class="preview-content">
+                    <img id="previewImage" class="preview-image" alt="Preview media" hidden>
+                    <video id="previewVideo" class="preview-video" controls playsinline hidden></video>
+                </div>
+            </div>
+        </div>
+
     </main>
+    <!-- Main Content Ends -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="./js/data-renderer.js"></script>
     <script>
-        AOS.init({
-            once: true,
-            duration: 900,
-            easing: "ease-out-cubic",
-            offset: 120
-        });
+        // Initialize AOS after config is loaded
+        function initAOS() {
+            AOS.init({
+                once: true,
+                duration: 900,
+                easing: "ease-out-cubic",
+                offset: 120
+            });
+        }
+
+        // Wait for config to load then init AOS
+        const configCheckInterval = setInterval(() => {
+            if (CONFIG && Object.keys(CONFIG).length > 0) {
+                clearInterval(configCheckInterval);
+                initAOS();
+            }
+        }, 100);
 
         const navbar = document.getElementById("siteNavbar");
-        const navLinks = document.querySelectorAll(".site-navbar .nav-link");
         const sections = document.querySelectorAll("section[id]");
+        const navLinks = () => document.querySelectorAll(".site-navbar .nav-link");
 
         function updateNavbar() {
+            if (!navbar) return;
             navbar.classList.toggle("shadow-sm", window.scrollY > 8);
         }
 
@@ -2217,7 +612,7 @@
                 if (window.scrollY >= top) current = section.getAttribute("id");
             });
 
-            navLinks.forEach(link => {
+            navLinks().forEach(link => {
                 link.classList.remove("active");
                 if (link.getAttribute("href") === "#" + current) {
                     link.classList.add("active");
@@ -2228,6 +623,14 @@
         window.addEventListener("scroll", () => {
             updateNavbar();
             setActiveLink();
+        });
+
+        document.addEventListener("click", event => {
+            const link = event.target.closest(".site-navbar .nav-link");
+            if (link) {
+                navLinks().forEach(item => item.classList.remove("active"));
+                link.classList.add("active");
+            }
         });
 
         updateNavbar();
@@ -2272,70 +675,6 @@
         }, { threshold: 0.6 });
 
         statNumbers.forEach(num => statObserver.observe(num));
-
-        const video = document.getElementById("mainVideo");
-        const playBtn = document.getElementById("playBtn");
-        const thumbs = document.querySelectorAll(".video-thumb");
-
-        const videoList = [
-            "./assets/videos/1.mp4",
-            "./assets/videos/2.mp4",
-            "./assets/videos/3.mp4",
-            "./assets/videos/4.mp4",
-            "./assets/videos/5.mp4"
-        ];
-
-        let currentIndex = 0;
-
-        function setActiveThumb(index) {
-            thumbs.forEach(t => t.classList.remove("active"));
-            if (thumbs[index]) thumbs[index].classList.add("active");
-        }
-
-        function loadVideo(index, autoplay = true) {
-            currentIndex = index;
-            video.src = videoList[currentIndex];
-            video.load();
-            setActiveThumb(currentIndex);
-
-            if (autoplay) {
-                video.play().then(() => {
-                    playBtn.style.display = "none";
-                }).catch(() => {
-                    playBtn.style.display = "flex";
-                });
-            }
-        }
-
-        playBtn.addEventListener("click", () => {
-            video.play().then(() => {
-                playBtn.style.display = "none";
-            }).catch(() => { });
-        });
-
-        thumbs.forEach((thumb, index) => {
-            thumb.addEventListener("click", () => {
-                loadVideo(index, true);
-            });
-        });
-
-        video.addEventListener("ended", () => {
-            const nextIndex = (currentIndex + 1) % videoList.length;
-            loadVideo(nextIndex, true);
-        });
-
-        video.addEventListener("play", () => {
-            playBtn.style.display = "none";
-        });
-
-        video.addEventListener("pause", () => {
-            if (video.currentTime < video.duration) {
-                playBtn.style.display = "flex";
-            }
-        });
-
-        loadVideo(0, false);
-
 
         const reveals = document.querySelectorAll(".reveal");
 

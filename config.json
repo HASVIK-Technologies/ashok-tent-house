@@ -1,0 +1,198 @@
+{
+  "site": {
+    "title": "Ashok Tent House",
+    "description": "Premium tent, decoration, and event management services for weddings, parties, and occasions."
+  },
+  "contact": {
+    "phone": "+91 80521 90808",
+    "email": "ashoktenthouse@gmail.com",
+    "whatsapp": "+91 80521 90808",
+    "address": "Adar, Bansdih - Ballia, U.P."
+  },
+  "navigation": [
+    { "label": "Home", "href": "#home" },
+    { "label": "About Us", "href": "#about-services" },
+    { "label": "Owner", "href": "#owner" },
+    { "label": "Gallery", "href": "#gallery" },
+    { "label": "Stats", "href": "#stats" },
+    { "label": "Why Us", "href": "#why-us" },
+    { "label": "Contact Us", "href": "#contact" }
+  ],
+  "hero": {
+    "strap": "Make Your Moments Grand & Memorable",
+    "title": "Ashok Tent House",
+    "subtitle": [
+      "Trusted Event Solutions in Adar, Bansdih - Ballia, U.P. for 25+ Years."
+    ],
+    "badges": [
+      "Wedding Decoration",
+      "Tent & Canopy",
+      "Event Management"
+    ],
+    "cta": {
+      "primary": { "label": "Call Now", "type": "call", "icon": "bi-telephone-fill" },
+      "secondary": { "label": "WhatsApp Us", "type": "whatsapp", "icon": "bi-whatsapp" }
+    },
+    "backgroundImage": "./assets/images/hero-red.jpeg"
+  },
+  "about": {
+    "kicker": "About Us",
+    "title": "Creating <span class=\"about-accent\">Experiences</span><br />That Stay Forever",
+    "description": [
+      "Ashok Tent House is a trusted name in the event industry, based in Adar, Bansdih - Ballia, U.P. We provide complete solutions for weddings, receptions, parties, corporate events and all special occasions.",
+      "From elegant tent setups to beautiful decorations and flawless arrangements, we take care of every detail to make your event truly unforgettable."
+    ],
+    "experience": "15+",
+    "experienceText": "Years of<br />Experience",
+    "images": [
+      { "src": "./assets/images/1.jpeg", "alt": "Event decoration setup", "size": "large" },
+      { "src": "./assets/images/2.jpeg", "alt": "Decorated event stage", "size": "small" },
+      { "src": "./assets/images/3.jpeg", "alt": "Wedding decor pathway", "size": "small" }
+    ]
+  },
+  "services": [
+    {
+      "icon": "bi-badge-tm",
+      "title": "Tent & Canopy",
+      "description": "Elegant & spacious tent arrangements",
+      "delay": 50
+    },
+    {
+      "icon": "bi-flower1",
+      "title": "Decoration",
+      "description": "Beautiful stage & venue decoration",
+      "delay": 100
+    },
+    {
+      "icon": "bi-lightbulb",
+      "title": "Lighting",
+      "description": "Premium lighting for all occasions",
+      "delay": 150
+    },
+    {
+      "icon": "bi-bell",
+      "title": "Catering Support",
+      "description": "Hygienic catering arrangements",
+      "delay": 200
+    },
+    {
+      "icon": "bi-car-front",
+      "title": "Transport",
+      "description": "Transport facilities on request",
+      "delay": 250
+    },
+    {
+      "icon": "bi-calendar-event",
+      "title": "Event Management",
+      "description": "Complete event management",
+      "delay": 300
+    }
+  ],
+  "owner": {
+    "kicker": "Meet The Founder",
+    "name": "Ankur Kumar Singh",
+    "subtitle": "Owner & Event Specialist",
+    "description": [
+      "With years of hands-on experience in event setup and decoration, Ankur Kumar Singh has been the driving force behind Ashok Tent House. His dedication to quality, detail, and customer satisfaction has helped create hundreds of successful events.",
+      "From small family gatherings to grand weddings, his vision ensures every event becomes a memorable experience."
+    ],
+    "highlights": [
+      "Founder-Led Service",
+      "Client-Focused Planning",
+      "Quality Supervision"
+    ],
+    "signature": "— Ankur Kumar Singh",
+    "image": "./assets/images/owner.jpeg"
+  },
+  "gallery": {
+    "kicker": "Our Work",
+    "title": "Moments We Crafted",
+    "images": [
+      { "src": "./assets/images/1.jpeg", "alt": "Royal wedding setup", "size": "big" },
+      { "src": "./assets/images/2.jpeg", "alt": "Stage decoration", "size": "normal" },
+      { "src": "./assets/images/3.jpeg", "alt": "Entrance design", "size": "normal" },
+      { "src": "./assets/images/4.jpeg", "alt": "Lighting setup", "size": "tall" },
+      { "src": "./assets/images/5.jpeg", "alt": "Mandap design", "size": "normal" },
+      { "src": "./assets/images/6.jpeg", "alt": "Outdoor setup", "size": "normal" },
+      { "src": "./assets/images/7.jpg", "alt": "Catering arrangement", "size": "normal" },
+      { "src": "./assets/images/8.jpg", "alt": "Special event setup", "size": "normal" },
+      { "src": "./assets/images/9.jpg", "alt": "Grand wedding decor", "size": "big" },
+      { "src": "./assets/images/10.jpg", "alt": "Event lighting design", "size": "tall" },
+      { "src": "./assets/images/11.jpg", "alt": "Wedding stage setup", "size": "normal" },
+      { "src": "./assets/images/12.jpg", "alt": "Decorated venue", "size": "normal" },
+      { "src": "./assets/images/13.jpeg", "alt": "Premium tent setup", "size": "normal" },
+      { "src": "./assets/images/14.jpg", "alt": "Event decor details", "size": "normal" }
+    ]
+  },
+  "videos": {
+    "kicker": "Video Gallery",
+    "title": "Watch Our Work",
+    "videoList": [
+      { "src": "./assets/videos/1.mp4", "thumbnail": "./assets/images/thumb1.jpeg" },
+      { "src": "./assets/videos/2.mp4", "thumbnail": "./assets/images/thumb2.jpeg" },
+      { "src": "./assets/videos/3.mp4", "thumbnail": "./assets/images/thumb1.jpeg" },
+      { "src": "./assets/videos/4.mp4", "thumbnail": "./assets/images/thumb2.jpeg" },
+      { "src": "./assets/videos/5.mp4", "thumbnail": "./assets/images/thumb1.jpeg" }
+    ],
+    "mainPoster": "./assets/images/thumb1.jpeg"
+  },
+  "stats": [
+    { "number": 500, "label": "Events Completed" },
+    { "number": 25, "label": "Years Experience" },
+    { "number": 100, "label": "Client Satisfaction" },
+    { "number": 24, "label": "Support Available" }
+  ],
+  "whyUs": {
+    "kicker": "Why Choose Us",
+    "title": "Reliable, Creative & Complete",
+    "items": [
+      {
+        "icon": "bi-award",
+        "title": "Experienced Team",
+        "description": "Skilled professionals with years of experience",
+        "delay": 0
+      },
+      {
+        "icon": "bi-currency-rupee",
+        "title": "Affordable Pricing",
+        "description": "Best services at the most reasonable rates",
+        "delay": 100
+      },
+      {
+        "icon": "bi-people-fill",
+        "title": "Complete Solution",
+        "description": "All your event needs under one roof",
+        "delay": 200
+      },
+      {
+        "icon": "bi-hand-thumbs-up",
+        "title": "Customer Satisfaction",
+        "description": "We ensure your happiness is our success",
+        "delay": 300
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "stars": 5,
+      "text": "Ashok Tent House made our wedding absolutely perfect. The decoration and arrangement were beyond our expectations.",
+      "author": "Rajesh Kumar"
+    }
+  ],
+  "footer": {
+    "company": "Ashok Tent House",
+    "tagline": "Your Trust, Our Commitment",
+    "explore": [
+      { "label": "About", "href": "#about-services" },
+      { "label": "Owner", "href": "#owner" },
+      { "label": "Work", "href": "#gallery" },
+      { "label": "Contact", "href": "#contact" }
+    ],
+    "developer": {
+      "name": "HASVIK Technologies",
+      "location": "Maniar, Ballia, Uttar Pradesh",
+      "website": "https://www.hasviktech.com"
+    },
+    "copyright": "© 2024 Ashok Tent House"
+  }
+}

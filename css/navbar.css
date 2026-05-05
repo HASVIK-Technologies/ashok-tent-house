@@ -1,0 +1,111 @@
+.designer-bar {
+    background: linear-gradient(90deg, #210206 0%, #4b030b 55%, #5a0610 100%);
+    color: rgba(255, 255, 255, 0.92);
+    font-size: .9rem;
+    border-bottom: 1px solid rgba(241, 193, 90, .18);
+}
+
+.designer-bar .badge-soft {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: var(--radius-pill);
+    background: rgba(241, 193, 90, .12);
+    color: #fff;
+    border: 1px solid rgba(241, 193, 90, .22);
+    white-space: nowrap;
+}
+
+.designer-bar a {
+    color: #fff;
+}
+
+.designer-bar a:hover {
+    color: var(--text-primary-2);
+}
+
+.designer-bar .site-chip {
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: var(--radius-pill);
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .12);
+}
+
+.site-navbar {
+    padding-left: 140px;
+    background: var(--nav-background);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 28px rgba(20, 48, 77, 0.06);
+}
+
+.site-navbar .navbar-brand {
+    padding: 10px 0;
+    display: inline-flex;
+    align-items: center;
+}
+
+.logo-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 100px;
+    background: #fff;
+    border-bottom-left-radius: 75px;
+    border-bottom-right-radius: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.logo-box img {
+    width: 95px;
+    height: auto;
+    object-fit: contain;
+}
+
+.site-navbar .nav-link {
+    color: var(--text-white);
+    font-weight: 700;
+    font-size: .92rem;
+    padding: 1.2rem .95rem;
+    position: relative;
+    transition: color var(--transition-base);
+}
+
+.site-navbar .nav-link:hover,
+.site-navbar .nav-link.active {
+    color: var(--text-primary-2);
+}
+
+.site-navbar .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 14px;
+    height: 2px;
+    background: var(--primary-2);
+    border-radius: var(--radius-pill);
+}
+
+.call-top {
+    padding: 6px 16px;
+    font-weight: 600;
+    transition: transform var(--transition-base), background var(--transition-base);
+    white-space: nowrap;
+}
+
+.navbar-toggler {
+    border: 0;
+    box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}

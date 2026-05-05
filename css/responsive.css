@@ -1,0 +1,251 @@
+@media (max-width: 1199.98px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .why-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-left {
+    padding: 56px 24px 36px 28px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .logo-box {
+    width: 100px;
+    height: 72px;
+    border-bottom-left-radius: 75px;
+    border-bottom-right-radius: 75px;
+  }
+
+  .logo-box img {
+    width: 116px;
+    height: 64px;
+  }
+
+  .site-navbar {
+    padding-left: 0;
+  }
+
+  .site-navbar .container ul {
+    padding-top: 24px;
+  }
+
+  .site-navbar .nav-link.active::after {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+
+  .hero-left {
+    padding: 38px 22px 24px;
+    border-radius: 28px;
+  }
+
+  .hero-art {
+    min-height: 420px;
+    border-radius: 28px;
+  }
+
+  .hero-shell {
+    grid-template-columns: 1fr;
+    padding: 40px 0;
+  }
+
+  .hero-shell::before,
+  .hero-shell::after {
+    opacity: 0.92;
+  }
+
+  .hero-actions {
+    gap: 12px;
+  }
+
+  .hero-badges {
+    gap: 8px;
+  }
+
+  .about-collage {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .owner-content {
+    padding: 24px;
+  }
+
+  .owner-image {
+    min-height: 320px;
+  }
+
+  .gallery-premium-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 220px;
+  }
+
+  .gallery-item.big {
+    grid-column: span 2;
+  }
+
+  .video-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+
+  .why-items {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+  }
+
+  .footer-col.brand {
+    grid-column: 1 / -1;
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto 20px;
+  }
+
+  .footer-col.brand img {
+    margin: 0 auto 16px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .designer-bar {
+    font-size: 0.82rem;
+  }
+
+  .designer-bar .badge-soft,
+  .designer-bar .site-chip {
+    width: 100%;
+    justify-content: center;
+    white-space: normal;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+
+  .hero-strap {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.96rem;
+  }
+
+  .hero-actions {
+    gap: 10px;
+  }
+
+  .hero-left {
+    margin: 0 18px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-premium-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 220px;
+  }
+
+  .gallery-item.big,
+  .gallery-item.tall {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-card img {
+    height: 180px;
+  }
+
+  .why-items {
+    grid-template-columns: 1fr;
+  }
+
+  .about-img-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-img-large {
+    min-height: 260px;
+  }
+
+  .about-img-small.top,
+  .about-img-small.bottom {
+    min-height: 180px;
+  }
+
+  .experience-badge {
+    width: 96px;
+    height: 96px;
+    border-width: 6px;
+  }
+
+  .experience-number {
+    font-size: 1.7rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 35px;
+    margin-bottom: 40px;
+    place-items: center;
+  }
+
+  .footer-col {
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .footer-col.brand {
+    grid-column: auto;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section-padding {
+    padding: 72px 0;
+  }
+
+  .hero-shell {
+    min-height: 560px;
+  }
+
+  .owner-title {
+    font-size: 2.2rem;
+  }
+
+  .owner-image {
+    min-height: 260px;
+  }
+
+  .map-frame {
+    min-height: 260px;
+  }
+
+  .section-title-line {
+    width: 56px;
+    margin: 0 10px;
+  }
+
+  .services-title {
+    font-size: 1.65rem;
+  }
+}
