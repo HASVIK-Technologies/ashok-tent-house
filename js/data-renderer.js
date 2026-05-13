@@ -17,6 +17,14 @@ async function loadConfig() {
   }
 }
 
+function renderSocialMedia() {
+  const whatsappLink = document.querySelector('.whatsapp-btn');
+  if (whatsappLink && CONFIG.contact && CONFIG.contact.whatsapp) {
+    const whatsappPhone = CONFIG.contact.whatsapp.replace(/\s+/g, '').replace(/\D/g, '');
+    whatsappLink.href = `https://wa.me/${whatsappPhone}`;
+  }
+}
+
 // Render Navigation Links
 function renderNavigation() {
   const navMenu = document.getElementById('navMenu').querySelector('.navbar-nav');
@@ -380,6 +388,7 @@ async function initializeFromConfig() {
   }
 
   // Render all sections
+  renderSocialMedia();
   renderNavigation();
   renderHero();
   renderAbout();

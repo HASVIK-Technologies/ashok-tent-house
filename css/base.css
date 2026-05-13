@@ -255,6 +255,19 @@ a {
     max-height: 90vh;
 }
 
+.whatsapp-btn {
+    width: 56px;
+    height: 56px;
+    right: 16px;
+    bottom: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: var(--shadow-md);
+    z-index: 4000;
+}
+
 @media (max-width: 991.98px) {
     .hero-left {
         padding: 56px 24px 36px 28px;
